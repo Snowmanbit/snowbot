@@ -1,0 +1,45 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  // Set the client user's presence
+  client.user.setPresence({ activity: { name: "Various Devs™ #help" }, status: "" });
+});
+
+// Create an event listener for messages
+client.on("message", message => {
+  // If the message is "ping"
+  if (message.content === "Ping") {
+    // Send "pong" to the same channel
+    message.channel.send("Pong");
+  }
+});
+
+// Create an event listener for messages
+client.on("message", message => {
+  // If the message is "ping"
+  if (message.content === "#invite") {
+    // Send "pong" to the same channel
+    message.channel.send(
+      "https://discord.com/api/oauth2/authorize?client_id=727980773831082046&permissions=0&scope=bot here's the link to invite the bot :)"
+    );
+  }
+});
+
+client.on("message", message => {
+  // If the message is "ping"
+  if (message.content === "#maker") {
+    // Send "pong" to the same channel
+    message.channel.send("**angry duck ,snowman**");
+  }
+});
+
+client.on("message", message => {
+  // If the message is "ping"
+  if (message.content === "") {
+    // Send "pong" to the same channel
+    message.channel.send("");
+  }
+});
+
+client.login("NzI3OTgwNzczODMxMDgyMDQ2.XvzvVg.y5NJWl6sfsnZPbmhpZIUycvBRBA");
